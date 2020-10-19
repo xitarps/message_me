@@ -20,6 +20,11 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Use smenatic ui - https://github.com/doabit/semantic-ui-sass
+gem 'semantic-ui-sass'
+# Use Jquery - https://github.com/rails/jquery-rails
+gem 'jquery-rails'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
