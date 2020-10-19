@@ -7,3 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(username:'xita', email: 'xitarps@gmail.com', password:'123456')
+User.create(username:'xita2', email: 'xitarps2@gmail.com', password:'123456')
+Message.create(body:'Olá xita2', user_id: 1)
+Message.create(body:'Olá xita1', user_id: 2)

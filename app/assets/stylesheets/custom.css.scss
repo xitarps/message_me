@@ -18,6 +18,7 @@ i.orange.icon{
 // chat window user name
 .event .content .summary em{
   color: #ff5e00e5 !important;
+  font-size: 1.3em !important;
 }
 //chat send message area
 .ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="time"], .ui.form input[type="text"], .ui.form input[type="file"], .ui.form input[type="url"]{
@@ -29,4 +30,24 @@ i.orange.icon{
 }
 .chatbox{
   height: 450px;
+}
+.your_message{
+  text-shadow: 0 0 0em #ff5e00;
+
+	
+	animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+	0% {
+    text-shadow: 0 0 0em #ff5e0000;
+	}
+
+	70% {
+    text-shadow: 0 0 0.8em #ff5e00;
+	}
+
+	100% {
+    text-shadow: 0 0 0em #ff5e0000;
+	}
 }
