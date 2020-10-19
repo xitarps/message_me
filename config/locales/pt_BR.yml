@@ -1,0 +1,107 @@
+pt-BR:
+  date:
+    formats:
+      default: "%A, %d de %B de %Y, %H:%M h"
+      short: "%d/%m, %H:%M h"
+      long: "%A, %d de %B de %Y, %H:%M h"
+    day_names: [Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado]
+    abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
+    month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+    abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+    order: [day, month, year]
+  time:
+    formats:
+      default: "%A, %d de %B de %Y, %H:%M h"
+      short: "%d/%m, %H:%M h"
+      long: "%A, %d de %B de %Y, %H:%M h"
+    am: ''
+    pm: ''
+  home: 'início'
+  hello: 'olá'
+  your_email: 'seu email'
+  your_zip_code: 'seu cep'
+  name: 'nome'
+  save: 'salvar'
+  return: 'voltar'
+  modify: 'alterar'
+  enter: 'entrar'
+  password: 'senha'
+  log_in: 'entrar'
+  logout: 'sair'
+  sign_up: 'cadastrar'
+  remember_me: 'lembrar'
+  email: 'e-mail'
+  forgot_your_password: 'esqueceu sua senha?'
+  password_confirmation: 'digitar novamente a senha'
+  didnt_receive_email_instructions: 'não recebeu o email com instruções?'
+  didnt_receive_unlock_instructions: 'não recebeu as instruções para desbloquear?'
+  sign_in_with: 'entrar com'
+  leave_blank_dont_want_change: 'mantenha vazio caso não queira alterar'
+  characters_minimum: 'caracteres no mínimo'
+  current_password_needed: 'precisamos de sua senha atual para confirmar as mudanças'
+  current_password: 'senha atual'
+  to_update: 'atualizar'
+  cofirm_action: 'confirmar ação?'
+  cancel_account: 'cancelar conta'
+  back: 'anterior'
+  unhappy: 'descontente'
+  edit: 'editar'
+  currently_waiting_confirmation_for: 'atualmente aguardando confirmação'
+  resend_unlock_instructions: 'enviar novamente instruções de desbloqueio'
+  send_me_reset_password_instructions: 'redefinir senha'
+  change_password: 'trocar sua senha'
+  new_password: 'nova senha'
+  confirm_new_password: 'confirmar nova senha'
+  to_change_password: 'alterar sua senha'
+  welcome: 'Bem-vindo'
+  you_can_confirm_your_account_email_through_the_link_below: 'você pode confirmar seu e-mail pelo link a sequir'
+  account_confirmation: 'confirme minha conta'
+  hello: 'olá'
+  email_changed_notify: 'Estamos entrando em contato para notificar que seu email foi alterado para'
+  password_changed_notify_: 'Estamos entrando em contato para notificar que sua senha foi alterada'
+  someone_requested_password_changing: 'Houve uma requisição para alteração de sua senha, você pode fazer isso pelo link a seguir'
+  if_you_didnt_ask_ignore_email: 'Caso não tenha requisitado alteração, ignore este email'
+  password_wont_change_until_click: 'Sua senha não será modificada antes que entre e crie uma nova pelo link acima'
+  change_my_password: 'Trocar minha senha'
+  account_clocked: 'Sua conta foi bloqueada por realizar diversas tentativas não bem-sucedidas de login.'
+  click_below_unlock: 'Clique no link a seguir para desbloquear'
+  unlock_account: 'desbloquear minha conta'
+  resend_confirmation_instructions: 'reenviar instruções de confirmação'
+  confirm_action: 'tem certeza?'
+  email_example: 'nome@email.com.br'
+  edit_registration: 'alterar cadastro'
+  logo: 'logo'
+  yep: 'sim'
+  nope: 'não'
+  result: 'resultado'
+  send: 'enviar'
+  unknow: 'desconhecido'
+  user_zip_code: 'cep'
+  user: 'usuário'
+  terms: termos
+  art: 'art'
+  errors:
+      messages:
+        invalid_zipcode: 'está inválido.'
+  activerecord:
+    models:
+      user: 'usuário'
+    attributes:
+      user:
+        name: 'nome'
+        password: 'senha'
+        current_password: 'senha atual'
+        password_confirmation: 'confirmação de senha'
+        email: 'email'
+        user_zip_code: 'cep'
+        country: 'nacionalidade'
+        inclusion: 'inclusao'
+    errors:
+      messages:
+        inclusion: 'não selecionada'
+        blank: 'está com campo vazio, favor corrigir'
+        invalid: 'inserção inválida'
+        taken: 'já em uso'
+        confirmation: 'parece diferente, insira igual'
+        too_long: 'supera o limite de caracteres, que é: %{count}'
+        too_short: 'Inferior ao mínimo de caracteres'

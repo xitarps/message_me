@@ -10,9 +10,13 @@ module MessageMe
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+
     config.time_zone = "America/Sao_Paulo"
     config.active_record.default_timezone = "America/Sao_Paulo"
     ENV["TZ"] = "America/Sao_Paulo"
+    
+    I18n.available_locales = [:en, :'pt-BR']
+    config.i18n.default_locale = :'pt-BR'
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
