@@ -27,7 +27,7 @@ pt-BR:
   enter: 'entrar'
   password: 'senha'
   log_in: 'entrar'
-  logout: 'sair'
+  log_out: 'sair'
   sign_up: 'cadastrar'
   remember_me: 'lembrar'
   email: 'e-mail'
@@ -80,6 +80,11 @@ pt-BR:
   user: 'usuário'
   terms: termos
   art: 'art'
+  app_title: 'chatroom'
+  chatroom: 'Bate-papo'
+  message: 'mensagem'
+  messages: 'mensagens'
+  account: 'Conta'
   errors:
       messages:
         invalid_zipcode: 'está inválido.'

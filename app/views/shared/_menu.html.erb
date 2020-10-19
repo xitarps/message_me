@@ -1,18 +1,18 @@
 <div class="ui small inverted menu">
   <div class="ui container">
     <a class="item">
-      Home
+      <%= t(:chatroom).capitalize%>
     </a>
     <a class="item">
-      Messages
+      <%= t(:messages).capitalize%>
     </a>
     <div class="right menu">
       <div class="ui dropdown item">
-        Language <i class="dropdown icon"></i>
+        <%= t(:account).capitalize%> <i class="dropdown icon"></i>
         <div class="menu">
-          <a class="item">English</a>
-          <a class="item">Russian</a>
-          <a class="item">Spanish</a>
+          <a class="item"><%= t(:log_out).capitalize%></a>
+          <a class="item"><%= t(:log_in).capitalize%></a>
+          <a class="item"><%= t(:sign_up).capitalize%></a>
         </div>
       </div>
       <div class="item">
