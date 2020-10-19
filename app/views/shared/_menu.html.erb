@@ -1,18 +1,16 @@
 <div class="ui small inverted menu">
   <div class="ui container">
-    <a class="item">
-      <%= t(:chatroom).capitalize%>
-    </a>
-    <a class="item">
-      <%= t(:messages).capitalize%>
-    </a>
+
+    <%= link_to(t(:chatroom).capitalize, root_path, class:'item') %>
+    <%= link_to(t(:messages).capitalize, root_path, class:'item') %>
+    
     <div class="right menu">
       <div class="ui dropdown item">
         <%= t(:account).capitalize%> <i class="dropdown icon"></i>
         <div class="menu">
-          <a class="item"><%= t(:log_out).capitalize%></a>
-          <a class="item"><%= t(:log_in).capitalize%></a>
-          <a class="item"><%= t(:sign_up).capitalize%></a>
+          <%= link_to(t(:log_out).capitalize, root_path, class:'item') %>
+          <%= link_to(t(:log_in).capitalize, login_path, class:'item') %>
+          <%= link_to(t(:sign_up).capitalize, root_path, class:'item') %>
         </div>
       </div>
       <div class="item">
