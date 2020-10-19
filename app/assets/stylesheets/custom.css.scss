@@ -1,7 +1,23 @@
 @import "semantic-ui";
 *{
-  color: #FFF;
+  color: #FFF !important;
 }
 html,body{
   background-color: #222;
+}
+i.circular.coffee.icon{
+  box-shadow: 0em 0em 0em 0.1em #ff5e00a1 inset;
+}
+.ui.cards > .card > .content, .ui.card > .content {
+  background-color: #222;
+}
+.ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="time"], .ui.form input[type="text"], .ui.form input[type="file"], .ui.form input[type="url"]{
+  background-color: #111 !important;
+  color: #ff5e00e5 !important;
+}
+.event .content .summary em{
+  color: #ff5e00e5 !important;
+}
+.chatbox{
+  height: 450px;
 }

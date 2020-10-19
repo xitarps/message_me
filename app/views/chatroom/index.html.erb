@@ -1,3 +1,14 @@
-<h1>
-  You have reached the root page
-</h1>
+<h2 class="ui center aligned medium icon header">
+  <i class="circular coffee icon"></i>
+  <%= t(:say_something).capitalize%>
+</h2>
+
+<div class="ui two column grid">
+  <div class="twelve wide column">
+    <%= render './chatroom/partials/chat_window' %>
+  </div>
+
+  <div class="four wide column">
+    <%= render './chatroom/partials/chat_menu' %>
+  </div>
+</div>

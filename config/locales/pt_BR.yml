@@ -85,6 +85,7 @@ pt-BR:
   message: 'mensagem'
   messages: 'mensagens'
   account: 'Conta'
+  say_something: 'Diga algo'
   errors:
       messages:
         invalid_zipcode: 'está inválido.'
