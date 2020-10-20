@@ -36,6 +36,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # User.all
 gem 'hirb'
 
+# redis
+gem 'redis'
+
 group :production do
   # Use Postgres as Database
   gem 'pg'
