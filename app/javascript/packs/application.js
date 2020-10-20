@@ -50,8 +50,10 @@ function close_keyboard_when_enter(){
   $('#message_body').on('keydown', function(e) {
     if (e.keyCode == 13) {
       e.preventDefault()
+     
       document.querySelector('#message_submit_btn').click()
       document.querySelector('#message_body').blur();
+      document.querySelector('#message_body').value = ''
     };
   });
 }
