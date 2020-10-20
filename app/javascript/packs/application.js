@@ -44,6 +44,11 @@ $(document).on('turbolinks:load', ()=>{
     main_box.className = ('twelve '+main_box.className)
   }
 
+  document.querySelector('#message_submit_btn').addEventListener('click',(e)=>{
+    document.querySelector('#message_body').blur();
+    document.querySelector('#message_body').value = ''
+  })
+
 });
 
 function close_keyboard_when_enter(){
