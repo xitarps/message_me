@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<!-- message send box area -->
+<!-- message send box area 
 <div class="extra content">
   <form class="ui reply form">
     <div class="field">
@@ -16,4 +16,21 @@
       </div>
     </div>
   </form>
+</div>-->
+
+<div class="extra content">
+  <%= form_for(@message, html: {class: 'ui reply form', role: 'form'}, url: message_path) do |f| %>
+    <div class="field">
+      <div class="ui fluid icon input">
+        <%= f.text_field :body , placeholder:"Enter a message..."%>
+        <my_tag id="message_submit_btn" class="container">
+          <i class="bordered inverted orange edit icon" style="font-size: 1.3em;
+            border-radius: 0 0 0 50px;
+            border-radius: 0 10px 10px 0;">
+          </i>
+        </my_tag>
+        <%= f.button 'send', style:'display:none', id:"real_message_submit"%>
+      </div>
+    </div>
+  <% end %>
 </div>

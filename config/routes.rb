@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   get 'user/:id', to: 'users#show', as: :users
   get 'user/:id/edit', to: 'users#edit', as: :edit_user
 
+  post 'message', to: 'messages#create'
+
 end

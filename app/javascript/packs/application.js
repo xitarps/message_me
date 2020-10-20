@@ -25,6 +25,13 @@ $(document).on('turbolinks:load', ()=>{
   //dropdown menu
   $(".ui.dropdown").dropdown();
 
+  //my btn for submit
+  fake_btn = document.querySelector("#message_submit_btn")
+  real_btn=document.querySelector('#real_message_submit')
+  fake_btn.addEventListener("click", ()=>{
+    real_btn.click()
+  });
+
 });
 
 // Uncomment to copy all static images under ../images to the output folder and reference
