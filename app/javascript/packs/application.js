@@ -12,6 +12,8 @@ require("semantic-ui-sass")
 
 $(document).on('turbolinks:load', ()=>{
 
+  close_keyboard_when_enter()
+
   //flash close js
   $('.message .close')
     .on('click', function() {
@@ -43,6 +45,14 @@ $(document).on('turbolinks:load', ()=>{
   }
 
 });
+
+function close_keyboard_when_enter(){
+  $('#message_body').on('keydown', function(e) {
+    if (e.keyCode == 13) {
+      document.querySelector('#message_body').blur();
+    };
+  });
+}
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
