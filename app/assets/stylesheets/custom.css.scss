@@ -16,14 +16,15 @@ i.orange.icon{
   background-color: #222;
 }
 // chat window user name
-.event .content .summary em{
-  color: #ff5e00e5 !important;
+.event .content .summary em.any_user{
+  color: #ff5e00 !important;
   font-size: 1.3em !important;
+  text-shadow: 0 0 0em #ff5e00;
 }
 //chat send message area
 .ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="time"], .ui.form input[type="text"], .ui.form input[type="file"], .ui.form input[type="url"]{
   background-color: #111 !important;
-  color: #ff5e00e5 !important;
+  color: #ff6811 !important;
 }
 .ui.placeholder.segment{
   background-color: #333 !important;
@@ -32,10 +33,12 @@ i.orange.icon{
   height: 450px;
 }
 .your_message{
-  text-shadow: 0 0 0em #ff5e00;
+  text-shadow: 0 0 0em #09ff00;
 
+  color: #09ff00 !important;
+  font-size: 1.3em !important;
 	
-	animation: pulse 3s infinite;
+  animation: pulse 3s infinite;
 }
 
 @keyframes pulse {
@@ -44,7 +47,7 @@ i.orange.icon{
 	}
 
 	70% {
-    text-shadow: 0 0 0.8em #ff5e00;
+    text-shadow: 0 0 0.8em #09ff00;
 	}
 
 	100% {

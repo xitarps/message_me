@@ -1,6 +1,6 @@
 <div class="ui fluid raised card chatbox">
   <div class="content">
-    <div class="ui small feed">
+    <div class="ui small feed" id ="message-container-custom">
       <%= render @messages %>
     </div>
   </div>
@@ -19,7 +19,7 @@
 </div>-->
 
 <div class="extra content">
-  <%= form_for(@message, html: {class: 'ui reply form', role: 'form'}, url: message_path) do |f| %>
+  <%= form_for(@message, html: {class: 'ui reply form', role: 'form'}, url: message_path, remote: true) do |f| %>
     <div class="field">
       <div class="ui fluid icon input">
         <%= f.text_field :body , placeholder:"Enter a message..."%>
