@@ -35,10 +35,12 @@
 
     </div>
     <div class="middle aligned column">
-      <div class="ui big orange disabled button">
-        <i class="signup icon"></i>
-        <%= t(:sign_up).capitalize %>
-      </div>
+      <a href="<%= signup_path %>">
+        <div class="ui big orange button">
+          <i class="signup icon"></i>
+          <%= t(:sign_up).capitalize %>
+        </div>
+      </a>
     </div>
   </div>
   <div class="ui vertical divider">
