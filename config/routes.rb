@@ -19,4 +19,7 @@ Rails.application.routes.draw do
 
   post 'message', to: 'messages#create'
 
+  # action cable - websockets
+  mount ActionCable.server, at: '/cable'
+
 end
