@@ -10,6 +10,7 @@
         <div class="menu">
           <% if logged_in? %>
             <%= link_to(t(:log_out).capitalize, signout_path, method: :delete, class:'item') %>
+            <%= link_to(t(:edit).capitalize, users_path(session[:user_id]), method: :get, class:'item') %>
           <% else %>
             <%= link_to(t(:log_in).capitalize, login_path, class:'item') %>
             <%= link_to(t(:sign_up).capitalize, signup_path, class:'item') %>
@@ -17,9 +18,19 @@
           
         </div>
       </div>
-      <div class="item">
-          <div class="ui orange button"><%= t(:sign_up).capitalize%></div>
-      </div>
+
+      <% unless logged_in? %>
+        <div class="item register_orange_btn">
+          <a href="<%= signup_path %>">
+            <div class="ui orange button">
+              <%= t(:sign_up).capitalize%>
+            </div>
+          </a>
+        </div>
+      <% end %>
+      
+
+
     </div>
   </div>
 </div>
