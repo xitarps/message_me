@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       set_user_cookie
       redirect_to root_path
     else
-      @user = User.new(email: user_params[:email] ,password: user_params[:password])
+      @user = User.new(username: user_params[:username] ,password: user_params[:password])
       flash.now[:alert] = "Ops! Algo errado com esse email ou senha..."
       render :new
     end
