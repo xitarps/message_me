@@ -8,9 +8,13 @@
       <div class="ui dropdown item">
         <%= t(:account).capitalize%> <i class="dropdown icon"></i>
         <div class="menu">
-          <%= link_to(t(:log_out).capitalize, root_path, class:'item') %>
-          <%= link_to(t(:log_in).capitalize, login_path, class:'item') %>
-          <%= link_to(t(:sign_up).capitalize, root_path, class:'item') %>
+          <% if logged_in? %>
+            <%= link_to(t(:log_out).capitalize, signout_path, method: :delete, class:'item') %>
+          <% else %>
+            <%= link_to(t(:log_in).capitalize, login_path, class:'item') %>
+            <%= link_to(t(:sign_up).capitalize, signup_path, class:'item') %>
+          <% end %>
+          
         </div>
       </div>
       <div class="item">

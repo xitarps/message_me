@@ -11,6 +11,14 @@
   </head>
 
   <body>
+
+    <% unless flash[:alert].nil?%>
+      <%= flash[:alert] %>
+    <% end %>
+    <% unless flash[:notice].nil?%>
+      <%= flash[:notice] %>
+    <% end %>
+
     <%= render partial: './shared/menu' %>
 
     <div class="ui container">

@@ -1,23 +1,7 @@
 <div class="ui fluid raised card chatbox">
   <div class="content">
     <div class="ui small feed">
-
-      <% @messages.each do |message| %>
-
-        <div class="event">
-          <div class="content">
-            <div class="summary">
-              <em <%= (message.user_id ==1)? 'class=your_message' : '' %>> <%= message.user.username %></em> : 
-              <%= message.body %> - 
-              <%= Time.parse(message.created_at.to_s).strftime('%d/%m/%Y') + ' - ' +
-              Time.parse(message.created_at.to_s).strftime('%H:%M h')%>
-
-            </div>
-          </div>
-        </div>
-
-      <% end %>
-
+      <%= render @messages %>
     </div>
   </div>
 </div>

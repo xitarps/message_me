@@ -1,41 +1,47 @@
 <h2 class="ui center aligned large header">
-  Welcome to MessageMe - <em>a complete Chat App</em>
+  <%= t(:login_h2).capitalize %>
 </h2>
 
 <h4 class="ui center aligned medium icon header">
   <i class="circular orange power off tiny icon"></i>
-  Log in to continue
+  <%= t(:login_h4).capitalize %>
 </h4>
 
 <div class="ui placeholder segment">
   <div class="ui two column very relaxed stackable grid">
     <div class="column">
-      <div class="ui form">
+
+      <%= form_with model: @user, url: login_path, class: "ui form", local: true do |f| %>
         <div class="field">
-          <label>Username</label>
+          <%= f.label :username, t(:how_call_user).capitalize %>
           <div class="ui left icon input">
-            <input type="text" placeholder="Username">
+            <%= f.text_field :username, placeholder: t(:how_call_user).capitalize %>
             <i class="user icon"></i>
           </div>
         </div>
+
+
         <div class="field">
-          <label>Password</label>
+          <%= f.label :password, t(:password).capitalize %>
           <div class="ui left icon input">
-            <input type="password">
+            <%= f.password_field :password, placeholder: t(:password).capitalize %>
             <i class="lock icon"></i>
           </div>
         </div>
-        <div class="ui orange submit button">Login</div>
-      </div>
+
+
+        <%= f.submit t(:log_in).capitalize, class: "ui orange submit button" %>
+      <% end %>
+
     </div>
     <div class="middle aligned column">
-      <div class="ui big orange button">
+      <div class="ui big orange disabled button">
         <i class="signup icon"></i>
-        Sign Up
+        <%= t(:sign_up).capitalize %>
       </div>
     </div>
   </div>
   <div class="ui vertical divider">
-    Or
+    <%= t(:or).capitalize %>
   </div>
 </div>
