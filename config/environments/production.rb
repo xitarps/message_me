@@ -112,6 +112,6 @@ Rails.application.configure do
 
 
   #action cable request orgin
-  #config.action_cable.disable_request_forgery_protection:true
-  config.action_cable.allowed_request_origins = [ 'https://message-me-x.herokuapp.com/' ]
+  config.action_cable.disable_request_forgery_protection: true
+  #config.action_cable.allowed_request_origins = [ 'https://message-me-x.herokuapp.com/' ]
 end
