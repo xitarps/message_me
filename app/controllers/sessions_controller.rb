@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   before_action :redirect_if_already_signed_in, only: %i[new create]
+  after_action :set_user, only: %i[create]
   def new
     @user = User.new()
   end
@@ -25,5 +26,9 @@ class SessionsController < ApplicationController
   
   def user_params
     params.require(:user).permit(:username, :password)
+  end
+
+  def set_user
+    cookies[:username] = current_user.username || 'guest'
   end
 end

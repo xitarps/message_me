@@ -5,7 +5,6 @@ class MessagesController < ApplicationController
     if message.save
 
       ActionCable.server.broadcast "chatroom_channel",
-        is_your: (current_user==message.user)? true : false,
         owner: current_user.username, msg: message.body,
         time: Time.parse(message.created_at.to_s).strftime('%d/%m/%Y') + ' - ' +
         Time.parse(message.created_at.to_s).strftime('%H:%M h')

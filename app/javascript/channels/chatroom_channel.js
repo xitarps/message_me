@@ -35,9 +35,10 @@ consumer.subscriptions.create("ChatroomChannel", {
 
     let em = document.createElement('em')
 
-
-    if(is_your){
+    if(owner == document.cookie.substring(9)){
       em.classList.add('your_message')
+    }else{
+      em.classList.add('any_user')
     }
 
     em.innerHTML = `${owner} : `
