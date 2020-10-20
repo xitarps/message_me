@@ -2,7 +2,7 @@
   <div class="content">
     <div class="summary">
       
-      <em class=<%= (message.user_id == current_user.id)? 'your_message' : 'any_user' %>> <%= message.user.username %></em> : 
+      <em class=<%= (message.user_id == current_user.id)? 'your_message' : 'any_user' %>> <%= message.user.username %> : </em>
       <%= message.body %> - 
       <%= Time.parse(message.created_at.to_s).strftime('%d/%m/%Y') + ' - ' +
       Time.parse(message.created_at.to_s).strftime('%H:%M h')%>

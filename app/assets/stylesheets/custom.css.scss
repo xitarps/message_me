@@ -32,6 +32,9 @@ i.orange.icon{
 .chatbox{
   height: 450px;
 }
+#messages-window-custom{
+  overflow: auto;
+}
 .your_message{
   text-shadow: 0 0 0em #09ff00;
 

@@ -11,7 +11,10 @@ consumer.subscriptions.create("ChatroomChannel", {
 
   received(data) {
     // Called when there's incoming data on the websocket for this channel
-    
+
+    // Usind partial rendering
+    // $('#message-container-custom').append(data.mod_message)
+
     let list = document.querySelector('#message-container-custom')
 
     let owner = data.owner;
@@ -51,6 +54,10 @@ consumer.subscriptions.create("ChatroomChannel", {
 
     div_event.appendChild(div_content)
 
-    list.appendChild(div_event)
+    //append
+    //list.appendChild(div_event)
+    
+    //prepend
+    list.insertBefore(div_event, list.firstChild);
   }
 });
