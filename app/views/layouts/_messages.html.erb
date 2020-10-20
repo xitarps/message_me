@@ -1,0 +1,20 @@
+<% unless flash[:alert].nil?%>
+  <div class="ui message inverted">
+    <i class="close icon"></i>
+    <div class="header">
+      <i class="close icon custom_icon_error"></i>
+      <%= t(:sorry_error).capitalize %>
+    </div>
+    <p><%= flash[:alert] %></p>
+  </div>
+<% end %>
+<% unless flash[:notice].nil?%>
+<div class="ui message inverted">
+  <i class="close icon"></i>
+  <div class="header">
+    <i class="check icon custom_icon_success"></i>
+    <%= t(:notification).capitalize %>
+  </div>
+  <p><%= flash[:notice] %></p>
+</div>
+<% end %>

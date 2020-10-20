@@ -90,6 +90,8 @@ pt-BR:
   how_call_user: 'nome ou email'
   login_h2: 'Olá, esse é um aplicativo de chat'
   login_h4: 'entre com sua conta para continuar'
+  sorry_error: 'Algo não está certo...'
+  notification: 'notificação'
   errors:
       messages:
         invalid_zipcode: 'está inválido.'

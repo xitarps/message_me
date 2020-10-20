@@ -12,14 +12,11 @@
 
   <body>
 
-    <% unless flash[:alert].nil?%>
-      <%= flash[:alert] %>
-    <% end %>
-    <% unless flash[:notice].nil?%>
-      <%= flash[:notice] %>
-    <% end %>
-
     <%= render partial: './shared/menu' %>
+
+    <div class="ui container">
+      <%= render partial: './layouts/messages' %>
+    </div><br>
 
     <div class="ui container">
       <%= yield %>
