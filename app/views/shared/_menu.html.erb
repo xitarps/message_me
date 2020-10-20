@@ -10,7 +10,8 @@
         <div class="menu">
           <% if logged_in? %>
             <%= link_to(t(:log_out).capitalize, signout_path, method: :delete, class:'item') %>
-            <%= link_to(t(:edit).capitalize, users_path(session[:user_id]), method: :get, class:'item') %>
+            <%= link_to(t(:show).capitalize, users_path(session[:user_id]), method: :get, class:'item') %>
+            <%= link_to(t(:edit).capitalize, edit_user_path(@user), method: :get, class:'item') %>
           <% else %>
             <%= link_to(t(:log_in).capitalize, login_path, class:'item') %>
             <%= link_to(t(:sign_up).capitalize, signup_path, class:'item') %>

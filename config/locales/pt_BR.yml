@@ -46,6 +46,8 @@ pt-BR:
   back: 'anterior'
   unhappy: 'descontente'
   edit: 'editar'
+  username: 'nome'
+  show: 'detalhes'
   currently_waiting_confirmation_for: 'atualmente aguardando confirmação'
   resend_unlock_instructions: 'enviar novamente instruções de desbloqueio'
   send_me_reset_password_instructions: 'redefinir senha'

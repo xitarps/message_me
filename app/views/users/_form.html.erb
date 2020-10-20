@@ -1,32 +1,42 @@
-<%= form_with(model: user, local: true, url: signup_path) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<h4 class="ui center aligned medium icon header">
+  <i class="circular orange user tiny icon"></i>
+</h4>
 
-      <ul>
-        <% user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="ui placeholder segment">
+  <div class="ui column very relaxed stackable grid">
+    <div class="column">
+
+      <%= form_with(model: user, local: true, url: signup_path, class: "ui form") do |f| %>
+        <div class="field">
+          <%= f.label :username, t(:username).capitalize %>
+          <div class="ui left icon input">
+            <%= f.text_field :username, placeholder: t(:username).capitalize %>
+            <i class="user icon"></i>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= f.label :email, t(:email).capitalize %>
+          <div class="ui left icon input">
+            <%= f.text_field :email, placeholder: t(:email).capitalize %>
+            <i class="user icon"></i>
+          </div>
+        </div>
+
+
+        <div class="field">
+          <%= f.label :password, t(:password).capitalize %>
+          <div class="ui left icon input">
+            <%= f.password_field :password, placeholder: t(:password).capitalize %>
+            <i class="lock icon"></i>
+          </div>
+        </div>
+
+
+        <%= f.submit t(:log_in).capitalize, class: "ui orange submit button" %>
+      <% end %>
+
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
+    
   </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
