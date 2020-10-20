@@ -224,7 +224,7 @@ DEPENDENCIES
   pg
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.3)
-  redis
+  redis (~> 4.0)
   sass-rails (>= 6)
   selenium-webdriver
   semantic-ui-sass
