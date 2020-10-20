@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
   def create
     message = current_user.messages.build(message_params)
     if message.save
-
+      
       ActionCable.server.broadcast "chatroom_channel",
         owner: current_user.username, msg: message.body,
         time: Time.parse(message.created_at.to_s).strftime('%d/%m/%Y') + ' - ' +
