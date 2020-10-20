@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     flash[:notice] = "Deslogado com sucesso"
-    redirect_to root_path
+    redirect_to login_path
   end
   
   def user_params
