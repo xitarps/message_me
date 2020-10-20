@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   before_action :redirect_if_already_signed_in, only: %i[new create]
-  after_action :set_user, only: %i[create]
+  #after_action :set_user_cookie, only: %i[create]
   def new
     @user = User.new()
   end
@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(user_params[:password])
       flash[:notice] = "Olá, logado(a) com: #{@user.email}"
       session[:user_id] = @user.id
+      set_user_cookie
       redirect_to root_path
     else
       @user = User.new(email: user_params[:email] ,password: user_params[:password])
@@ -28,7 +29,7 @@ class SessionsController < ApplicationController
     params.require(:user).permit(:username, :password)
   end
 
-  def set_user
-    cookies[:username] = current_user.username || 'guest'
+  def set_user_cookie
+    cookies[:username] = @user.username || 'guest'
   end
 end

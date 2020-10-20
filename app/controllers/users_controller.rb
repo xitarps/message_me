@@ -29,7 +29,8 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to users_path(@user.id), notice: 'User was successfully created.'
+      set_user_cookie
+      redirect_to users_path(@user.id), notice: 'Usuário criado com sucesso'
     else
       render :new
     end
@@ -39,7 +40,8 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     if @user.update(user_params)
-      redirect_to users_path(@user.id), notice: 'User was successfully updated.'
+      set_user_cookie
+      redirect_to users_path(@user.id), notice: 'Modificação concluída.'
     else
       render :edit
     end
@@ -50,7 +52,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     
-    redirect_to users_url, notice: 'User was successfully destroyed.'
+    redirect_to users_url, notice: 'Descadastrado :(.'
   end
 
   private
@@ -62,5 +64,9 @@ class UsersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(:email, :username, :password)
+    end
+
+    def set_user_cookie
+      cookies[:username] = @user.username || 'guest'
     end
 end
