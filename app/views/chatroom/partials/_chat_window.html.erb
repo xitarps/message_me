@@ -6,18 +6,6 @@
   </div>
 </div>
 
-<!-- message send box area 
-<div class="extra content">
-  <form class="ui reply form">
-    <div class="field">
-      <div class="ui fluid icon input">
-        <input type="text" placeholder="Enter a message...">
-        <i class="bordered inverted orange edit icon"></i>
-      </div>
-    </div>
-  </form>
-</div>-->
-
 <div class="extra content">
   <%= form_for(@message, html: {class: 'ui reply form', role: 'form'}, url: message_path, remote: true) do |f| %>
     <div class="field">

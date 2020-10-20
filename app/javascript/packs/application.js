@@ -32,6 +32,16 @@ $(document).on('turbolinks:load', ()=>{
     real_btn.click()
   });
 
+  main_box = document.querySelector('#chat_main_box')
+
+  if(window.innerWidth <= 600){
+    main_box.classList.remove('twelve')
+    main_box.className = ('sixteen '+main_box.className)
+  }else{
+    main_box.classList.remove('sixteen')
+    main_box.className = ('twelve '+main_box.className)
+  }
+
 });
 
 // Uncomment to copy all static images under ../images to the output folder and reference

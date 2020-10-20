@@ -1,13 +1,14 @@
-<p id="notice"><%= notice %></p>
+<div class="ui container center aligned">
+  <p>
+    <%= gravatar_for @user, size: 200 %>
+    <br>
+    <strong>Nome:</strong>
+    <%= @user.username %><br>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
 
-<p>
-  <%= gravatar_for @user, size: 200 %>
-  <br>
-  <strong>Nome:</strong>
-  <%= @user.username %><br>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <%= link_to t(:edit).capitalize, edit_user_path(@user) %> |
+  <%= link_to t(:back).capitalize, root_path %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', root_path %>
+</div>

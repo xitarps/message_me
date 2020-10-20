@@ -71,3 +71,9 @@ i.orange.icon{
   border-radius: 50% !important;
   border: solid 5px #ff5e00;
 }
+
+@media only screen and (max-width: 600px) {
+  .invisible_if_mobile{
+    display: none !important;
+  }
+} 
