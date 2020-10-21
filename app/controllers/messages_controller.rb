@@ -2,7 +2,8 @@ class MessagesController < ApplicationController
   before_action :require_user
   def create
     message = current_user.messages.build(message_params)
-    if message.save
+    message.body.strip!
+    if !(message.body.empty?) && message.save
       
       ActionCable.server.broadcast "chatroom_channel",
         owner: current_user.username, msg: message.body,
