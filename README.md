@@ -1,24 +1,17 @@
-# README
+# Message me
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+project from:
+https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course
 
-Things you may want to cover:
+## Info:
+Chat system made with ruby & rails (Action cable)
 
-* Ruby version
+## in Action:
+https://message-me-x.herokuapp.com
 
-* System dependencies
+## Screens:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![register](git_images/prints/register.png)
+![show](git_images/prints/show.png)
+![update](git_images/prints/update.png)
+![chat](git_images/prints/chat.png)
