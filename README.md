@@ -6,9 +6,6 @@ https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course
 ## Info:
 Chat system made with ruby & rails (Action cable)
 
-## in Action:
-https://message-me-x.herokuapp.com
-
 ## Screens:
 
 ![register](git_images/prints/register.png)
